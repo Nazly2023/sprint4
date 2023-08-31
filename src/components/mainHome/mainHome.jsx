@@ -76,7 +76,7 @@ const MainHome = () => {
           src={kafe}
           className="flex absolute w-[134px] h-[108.02px] top-0 left-[1px]"
         />
-        <h3 className="flex absolute w-[168px] h-4 top-[8px] left-[130px] text-[14px] leading-[16.41px] tracking-[-0.3px] text-center text-[#414141]">
+        <h3 className="flex absolute w-[178px] h-4 top-[8px] left-[146px] text-[14px] leading-[16.41px] tracking-[-0.3px] text-center text-[#414141]">
           Last night Restaurant & Kafe
         </h3>
         <img
@@ -85,10 +85,10 @@ const MainHome = () => {
           className="flex absolute left-[147px] w-[68px] h-3 top-[30px]"
         />
         <p className="flex absolute w-[139px] h-4 top-[50px] left-[147px] text-[14px] leading-[16.41px] tracking-[-0.3px] text-center text-[#414141]">
-          Work time 09:30 - 23:00
+          Work time 10:00 - 22:00
         </p>
         <p className="flex absolute w-[57px] h-3 top-[70px] text-[10px] leading-[11.72px] tracking-[-0.3px] text-center text-[#a7a7a7] left-[147px]">
-          Before you <span className="cost text-[#414141] ml-[2.5px]">4$</span>
+          Before you <span className="cost text-[#414141] ml-[2.5px]">5$</span>
         </p>
       </section>
     </div>
