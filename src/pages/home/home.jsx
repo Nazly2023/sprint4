@@ -4,9 +4,10 @@ import useScreenSize from "../../hooks/useScreenSize";
 import "./home.scss";
 import Promotions from "../../components/promotions/promotions";
 import Categories from "../../components/categories/categories";
-import MainHome from "../../components/mainHome/mainHome";
+
 import ButtonNavigations from "../../components/buttonNavigations/buttonNavigations";
 import HeaderMobile from "../../components/headerMobile/headerMobile";
+import MainHome from "../../components/mainHome/mainHome";
 
 const Home = () => {
   const { width, height } = useScreenSize();

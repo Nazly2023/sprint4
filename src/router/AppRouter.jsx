@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import { AuthRoutes } from "../auth/routes/AuthRoutes";
 import { CheckingAuth } from "../ui/components/CheckingAuth";
 import { useCheckAuth } from "../hooks/useCheckAuth";
-import Home from "../pages/home/home";
+import { FoodAppRoutes } from "./FoodAppRoutes";
 
 export const AppRouter = () => {
   const { status } = useCheckAuth();
@@ -14,12 +14,12 @@ export const AppRouter = () => {
   return (
     <Routes>
       {status === "authenticated" ? (
-        <Route path="/*" element={<Home />} />
+        <Route path="/*" element={<FoodAppRoutes />} />
       ) : (
         <Route path="/auth/*" element={<AuthRoutes />} />
       )}
 
-      <Route path="/" element={<Navigate to="/auth/login" />} />
+      <Route path="/*" element={<Navigate to="/auth/login" />} />
     </Routes>
   );
 };

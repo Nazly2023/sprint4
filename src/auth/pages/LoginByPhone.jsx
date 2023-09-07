@@ -44,7 +44,7 @@ const LoginByPhone = () => {
         );
       })
       .then(() => {
-        navigate("/insertcode");
+        navigate("/auth/insertcode");
       })
       .catch((error) => {
         console.log(error);
@@ -61,7 +61,7 @@ const LoginByPhone = () => {
     generateRecaptcha(data.phone);
     const appVerifier = window.recaptchaVerifier;
     sendSms(data.phone, appVerifier);
-    // dispatch(startLoginWithCellPhoneNumber({}));
+   
   };
 
   return (
@@ -87,24 +87,7 @@ const LoginByPhone = () => {
         <div id="recaptch-container"></div>
       </div>
     </main>
-    // <AuthLayout>
-    //   <form onSubmit={handleSubmit(onSubmit)}>
-    //     <Grid>
-    //         <Grid item xs={ 12 } sx={{ mt: 2 }}>
-    //           <TextField
-    //             label="Número celular:"
-    //             type="number"
-    //             placeholder='+57 3213351544'
-    //             fullWidth
-    //             name=''
-    //             value={...register("phone")}
-    //             // onChange={onInputChange}
-    //           />
-    //           <div id="recaptch-container"></div>
-    //         </Grid>
-    //     </Grid>
-    //   </form>
-    // </AuthLayout>
+   
   );
 };
 

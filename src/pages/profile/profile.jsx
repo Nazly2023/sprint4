@@ -15,6 +15,7 @@ import { useState, useEffect } from "react";
 import EditProfile from "../editProfile/editProfile";
 import { useDispatch, useSelector } from "react-redux";
 import { startLogout } from "../../store/auth/thunks";
+import ButtonNavigations from "../../components/buttonNavigations/buttonNavigations";
 
 function Profile() {
   const [display, setDisplay] = useState(true);
@@ -88,6 +89,7 @@ function Profile() {
         <div className="container-item" onClick={handleLogout}>
           <p className="logOut">LogOut</p>
         </div>
+        <ButtonNavigations />
       </div>
     );
   } else {
