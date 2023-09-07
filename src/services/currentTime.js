@@ -8,11 +8,7 @@ function currentTime() {
 
   const formedTime = `${hour}:${minutes}:${second}`;
 
-  if (hourElement) {
-    hourElement.textContent = formedTime;
-  }
-
-  setInterval(currentTime, 1000);
+  return formedTime;
 }
 
-export default currentTime;
+export { currentTime };

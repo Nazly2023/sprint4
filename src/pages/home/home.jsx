@@ -13,16 +13,19 @@ const Home = () => {
   console.log(`width: ${width}, height: ${height}`);
 
   return (
-    <div className="bg-gradient-to-b from-white to-[#ffbc74] w-[375px] h-[844px] top-[-464px] left-[-214px]fondo">
+    <>
       {/* This will disappear when the window is less than 500 pixels wide. */}
-      {width >= 500 && <h1>Look at me</h1>}
-      <HeaderMobile />
-      <Location />
-      <Promotions />
-      <Categories />
-      <MainHome />
-      <ButtonNavigations />
-    </div>
+      {width <= 380 && (
+        <div className="bg-gradient-to-b from-white to-[#ffbc74] w-[375px] h-[844px] top-[-464px] left-[-214px] fondo">
+          <HeaderMobile />
+          <Location />
+          <Promotions />
+          <Categories />
+          <MainHome />
+          <ButtonNavigations />
+        </div>
+      )}
+    </>
   );
 };
 
