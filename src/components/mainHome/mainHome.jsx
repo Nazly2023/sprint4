@@ -8,7 +8,7 @@ const MainHome = () => {
   function redirectDetailRest(e) {
     e.preventDefault();
 
-    detailRest("/restaurant");
+    detailRest("/restaurant-details");
   }
 
   return (

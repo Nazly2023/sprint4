@@ -7,10 +7,16 @@ import { IconContext } from "react-icons";
 import { useNavigate } from "react-router-dom";
 
 const ButtonNavigations = () => {
-  const detailRest = useNavigate();
+  const navigate = useNavigate();
+
   function redirectSearch(e) {
     e.preventDefault();
-    detailRest("/search");
+    navigate("/search");
+  }
+
+  function redirectProfile(e) {
+    e.preventDefault();
+    navigate("/profile");
   }
   return (
     <div className="flex w-[323px] h-[37px] bottom-0 left-[34px] bg-transparent absolute top-[800px]">
@@ -22,7 +28,10 @@ const ButtonNavigations = () => {
         onClick={redirectSearch}
       />
       <PiClockCounterClockwiseThin className="flex absolute w-8 h-8 left-[194px] cursor-pointer" />
-      <PiUser className="flex absolute w-8 h-8 left-[291px] cursor-pointer" />
+      <PiUser
+        className="flex absolute w-8 h-8 left-[291px] cursor-pointer"
+        onClick={redirectProfile}
+      />
     </div>
   );
 };
